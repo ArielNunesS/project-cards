@@ -1,13 +1,11 @@
-const express = require('express');
-const app = express();
+const express = require('express');     // utilizar o express.js
+const routes = require('./routes');
 
-app.use(express.json());
 
-app.get('/', (request, response) => {
-    return response.json({
-      nome: "User Teste",  
-      profissão: "Cientista"
-    });
-});
+const app = express();          // guarda 'express()' na variável app
+require('./config/db_config.js');
 
-app.listen(8800);
+app.use(express.json());       
+app.use(routes);
+
+app.listen(8800); // abre o app na porta 8800 com node
