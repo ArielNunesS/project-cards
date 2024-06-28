@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import './app.css'
 import './main.css'
 import './global.css'
 import './sidebar.css'
 
+import Notes from './Components/Notes';
+
 function App() {
-  return (
-    <div id='app'>
+  const [ title, setTtile ] = useState('');
+  const [ notes, setNotes ] = useState('');
+
+  return (  
+<div id='app'>
 
     <aside>
       <strong>Caderno de Notas</strong>
@@ -14,36 +20,36 @@ function App() {
 
     <div className='input-block'>
       <label htmlFor='title'>Título da Anotação</label>
-      <input />
+      <input
+        required
+        value={title}
+      />
+      
     </div>
 
     <div className='input-block'>
       <label htmlFor='nota'>Anotação</label>
-      <textarea></textarea>
+      <textarea
+      required
+      value={notes}
+      
+      />
+
     </div>
 
       <button type='submit'>Salvar</button>
       </form>
     </aside>
 
-    <main>
+  <main>
 
     <ul>
-      <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-          <div>
-            x
-          </div>
-        </div>
-
-        <textarea>ASDASDASLKDJLKASJLKASDLKJ</textarea>
-      </li>
-      <li>askdskad</li>
+      <Notes />
     </ul>
 
-    </main>
-  </div>
+  </main>
+</div>
+
   );
 }
 
