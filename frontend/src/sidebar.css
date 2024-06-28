@@ -7,6 +7,12 @@ aside {
     padding: 2rem 1.3rem;
 }
 
+@media (max-width: 1000px) {
+    aside {
+        position: relative;
+    }
+}
+
 aside strong {
     font-size: 1.5rem;
     text-align: center;
@@ -62,8 +68,10 @@ aside form button[type=submit] {
     padding: 1rem 1.1rem;
     cursor: pointer;
     font-weight: bold;
+    opacity: 70%;
+    cursor: not-allowed;
 } aside form button:hover {
-    transition: 0.4s;
+    transition: all 0.4s;
     background-color: #4d33ad;
     transform: scale(1.1,1.1);
 }
