@@ -1,76 +1,17 @@
 import React from 'react';
 
-function Notes() {
+function Notes({ data }) {
     return (
 <>
     <li className='notepad-info'>
         <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
-    </li>
-      
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
-    </li>
+            <strong>{data.title}</strong>
+                    <div>
+                        x
+                    </div>
 
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
         </div>
-        <textarea></textarea>
-    </li>
-
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
-    </li>
-
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
-    </li>
-
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
-    </li>
-
-    <li className='notepad-info'>
-        <div>
-          <strong>Fazer Compras</strong>
-            <div>
-                x
-            </div>
-        </div>
-        <textarea></textarea>
+        <textarea defaultValue={data.notes}></textarea>
     </li>
 </>
     )
