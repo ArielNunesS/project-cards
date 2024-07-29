@@ -72,7 +72,7 @@ aside form button[type=submit] {
     cursor: not-allowed;
 } aside form button:hover {
     transition: all 0.4s;
-    background-color: #4d33ad;
+    background-color: hsl(253, 84%, 20%);
     transform: scale(1.1,1.1);
 }
 /* 1rem = 15px */
