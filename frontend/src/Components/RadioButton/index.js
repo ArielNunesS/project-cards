@@ -4,31 +4,18 @@ import './styles.css'
 function RadioButton() {
     return (<>
 
-<radioBtn>
     <br/>
-    <span />
-    Ordenar por:
-    <br/>
-<buttons>
-    <input
-      type='radio'
-      name='orderBy'
-      value='titulo'
-      /> Título
-      
-      <input
-      type='radio'
-      name='orderBy'
-      value='recente'
-      /> Recente
-      
-      <input
-      type='radio'
-      name='orderBy'
-      value='prioridade'
-      /> Prioridade
-</buttons>
-</radioBtn>
+<div className='buttonsContainer'>
+    <input id='title' type='radio' name='orderBy'value='title'  />
+    <label for='title'> Título</label>
+
+    <input id='priority' type='radio' name='orderBy'value='priority'/>
+    <label for='priority'> Prioridade</label>
+
+    <input id='recent' type='radio' name='orderBy'value='recent'/>
+    <label for='recent'> Recente</label>
+
+</div>
     
     </>)
 }

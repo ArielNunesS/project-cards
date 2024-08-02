@@ -1,11 +1,8 @@
-radioBtn input {
-    margin-top: 0.7rem;
-}
-
-buttons input[value=recente] {
+div input[name=orderBy] {
     margin-left: 1rem;
 }
 
-buttons input[value=prioridade] {
-    margin-left: 1rem;
+div label {
+    font-weight: bold;
+    font-size: 0.9rem;
 }
